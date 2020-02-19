@@ -8,6 +8,10 @@ import { Entry } from './models/entry.model';
 })
 export class CoreStore extends Store<CoreState> {
 
+  get entry() {
+    return this.state.entry;
+  }
+
   get entry$() {
     return this.select(state => state.entry);
   }

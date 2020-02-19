@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container">
+  <div class="card mt-5">
+    <div class="card-header">Admin</div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Fisrt Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="entries$ | async as entries;">
+          <tr *ngFor="let entry of entries; index as i;">
+            <th scope="row">{{ i }}</th>
+            <td>{{ entry.firstName }}</td>
+            <td>{{ entry.lastName }}</td>
+            <td>{{ entry.email }}</td>
+            <td>{{ entry.address }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

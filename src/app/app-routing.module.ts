@@ -21,6 +21,10 @@ const routes: Routes = [
     path: 'success',
     loadChildren: () => import('./success/success.module').then(m => m.SuccessModule),
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+  },
 ];
 
 @NgModule({
